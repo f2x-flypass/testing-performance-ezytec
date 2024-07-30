@@ -1,0 +1,50 @@
+{
+  "Total" : {
+    "transaction" : "Total",
+    "sampleCount" : 4964,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 399.12630942788076,
+    "medianResTime" : 380.0,
+    "minResTime" : 318.0,
+    "maxResTime" : 21473.0,
+    "pct1ResTime" : 427.0,
+    "pct2ResTime" : 439.0,
+    "pct3ResTime" : 553.0,
+    "throughput" : 16.44024349047168,
+    "receivedKBytesPerSec" : 7.534384966732021,
+    "sentKBytesPerSec" : 14.046364864775354
+  },
+  "getPlate" : {
+    "transaction" : "getPlate",
+    "sampleCount" : 4963,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 398.95768688293265,
+    "medianResTime" : 380.0,
+    "minResTime" : 318.0,
+    "maxResTime" : 21473.0,
+    "pct1ResTime" : 427.0,
+    "pct2ResTime" : 439.0,
+    "pct3ResTime" : 552.3599999999997,
+    "throughput" : 16.540521444687737,
+    "receivedKBytesPerSec" : 7.574975275036578,
+    "sentKBytesPerSec" : 14.133746351661884
+  },
+  "loginAFlypass" : {
+    "transaction" : "loginAFlypass",
+    "sampleCount" : 1,
+    "errorCount" : 0,
+    "errorPct" : 0.0,
+    "meanResTime" : 1236.0,
+    "medianResTime" : 1236.0,
+    "minResTime" : 1236.0,
+    "maxResTime" : 1236.0,
+    "pct1ResTime" : 1236.0,
+    "pct2ResTime" : 1236.0,
+    "pct3ResTime" : 1236.0,
+    "throughput" : 0.8090614886731392,
+    "receivedKBytesPerSec" : 1.6734299150485437,
+    "sentKBytesPerSec" : 0.2773247876213592
+  }
+}
