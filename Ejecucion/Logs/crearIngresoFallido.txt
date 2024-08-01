@@ -1,0 +1,1 @@
+Placa: ROB714, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ROB714","parking_id":"100","unique_id":"PDPRE310720240004","parking_entrance_date":"2024-07-31T22:00:42"}
