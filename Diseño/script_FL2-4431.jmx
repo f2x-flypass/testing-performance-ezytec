@@ -127,7 +127,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="consultarPlaca" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="consultarPlaca" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <intProp name="LoopController.loops">-1</intProp>
@@ -135,7 +135,7 @@
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
-        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
+        <boolProp name="ThreadGroup.delayedStart">false</boolProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">600</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -154,7 +154,7 @@
           <stringProp name="variableNames">plate,parkingId</stringProp>
         </CSVDataSet>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getPlate" enabled="false">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getPlate" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
@@ -176,8 +176,8 @@
         </HTTPSamplerProxy>
         <hashTree>
           <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
-            <stringProp name="ConstantTimer.delay">100</stringProp>
-            <stringProp name="RandomTimer.range">150</stringProp>
+            <stringProp name="ConstantTimer.delay">200</stringProp>
+            <stringProp name="RandomTimer.range">500</stringProp>
           </UniformRandomTimer>
           <hashTree/>
           <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
@@ -238,49 +238,73 @@
             <stringProp name="parameters"></stringProp>
             <stringProp name="filename"></stringProp>
             <stringProp name="cacheKey">true</stringProp>
-            <stringProp name="script">import groovy.json.JsonSlurper
-import java.nio.file.Files
-import java.nio.file.Paths
-import java.nio.file.StandardOpenOption
+            <stringProp name="script">import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.File;
+import groovy.json.JsonSlurper;
 
-// Ruta de los archivos donde se guardarán los resultados
-String fileFalse = &quot;C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Diseño/Data/automatic_payment_false.txt&quot;
-String fileTrue = &quot;C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Diseño/Data/automatic_payment_true.txt&quot;
-String fileNotFound = &quot;C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Diseño/Data/users_not_found.txt&quot;
+// Variables de JMeter
+String plate = vars.get(&quot;plate&quot;);
+String response = prev.getResponseDataAsString();
 
-// Función para escribir en el archivo
-void writeFile(String path, String content) {
-    File file = new File(path)
-    file &lt;&lt; content + System.lineSeparator()
-}
+// Rutas de los archivos de salida
+String fileFalse = &quot;C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Diseño/Data/automatic_payment_false.txt&quot;;
+String fileTrue = &quot;C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Diseño/Data/automatic_payment_true.txt&quot;;
+String fileNotFound = &quot;C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Diseño/Data/users_not_found.txt&quot;;
 
-// Obtener la respuesta
-String response = prev.getResponseDataAsString()
-def jsonResponse = new JsonSlurper().parseText(response)
+// Analizar la respuesta JSON
+def jsonResponse = new JsonSlurper().parseText(response);
 
-// Verificar y guardar según el valor de is_automatic_payment
-if (jsonResponse.is_automatic_payment == false) {
-    writeFile(fileFalse, jsonResponse.plate)
-} else if (jsonResponse.is_automatic_payment == true) {
-    writeFile(fileTrue, jsonResponse.plate)
+// Construir el contenido a escribir
+String contentToWrite = &quot;Request Plate: &quot; + plate + &quot;, Response: &quot; + response;
+
+// Determinar el archivo adecuado basado en is_automatic_payment y message
+String filePath;
+if (jsonResponse.is_automatic_payment == false &amp;&amp; jsonResponse.message == &quot;Usuario encontrado&quot;) {
+    filePath = fileFalse;
+} else if (jsonResponse.is_automatic_payment == true &amp;&amp; jsonResponse.message == &quot;Usuario encontrado&quot;) {
+    filePath = fileTrue;
 } else {
-    writeFile(fileNotFound, jsonResponse.message)
+    filePath = fileNotFound;
 }
+
+// Verificar si el archivo existe, si no, crea el archivo y escribe el encabezado
+File file = new File(filePath);
+boolean fileExists = file.exists();
+
+try (FileWriter fw = new FileWriter(filePath, true);
+     PrintWriter pw = new PrintWriter(fw)) {
+
+    // Si el archivo no existe, escribe el encabezado
+    if (!fileExists) {
+        pw.println(&quot;Request Plate, Response&quot;);
+    }
+
+    // Escribir el contenido en el archivo
+    pw.println(contentToWrite);
+    log.info(&quot;Contenido guardado en el archivo: &quot; + filePath);
+
+} catch (Exception e) {
+    log.error(&quot;Error al guardar el contenido en el archivo: &quot; + filePath, e);
+}
+
+
+
 </stringProp>
           </JSR223PostProcessor>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="registrarEntrada" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="registrarEntrada" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <stringProp name="LoopController.loops">2</stringProp>
+          <intProp name="LoopController.loops">-1</intProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.delayedStart">true</boolProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">540</stringProp>
         <stringProp name="ThreadGroup.delay">60</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
@@ -342,6 +366,11 @@ vars.put(&quot;fechaEntrada&quot;, fechaInicialFormatted)
           <stringProp name="TestPlan.comments">Simula la entrada por el parquedero de Eglobalt</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">500</stringProp>
+            <stringProp name="RandomTimer.range">800</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="delimiter">;</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
@@ -467,249 +496,38 @@ if (isSuccess) {
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="registrarSalida" enabled="false">
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <stringProp name="LoopController.loops">1</stringProp>
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
-        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <stringProp name="ThreadGroup.duration">420</stringProp>
-        <stringProp name="ThreadGroup.delay">180</stringProp>
-        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
-      </ThreadGroup>
-      <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="trackVehicleExit" enabled="true">
-          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&#xd;
-    &quot;plate&quot; : &quot;${plateRS}&quot;,&#xd;
-    &quot;parking_id&quot; : &quot;${parkingIdRS}&quot;,&#xd;
-    &quot;unique_id&quot; : &quot;${uniqueIDRS}&quot;,&#xd;
-    &quot;parking_departure_date&quot;: &quot;${fechaSalida}&quot;,&#xd;
-    &quot;make_automatic_payment&quot;: ${makeAutomaticPaymentRS}&#xd;
-}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain">${urlCertSecu}</stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
-          <stringProp name="HTTPSampler.path">${apiEsytec}/track/vehicle</stringProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
-          <boolProp name="HTTPSampler.image_parser">false</boolProp>
-          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
-          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
-          <boolProp name="HTTPSampler.md5">false</boolProp>
-          <intProp name="HTTPSampler.ipSourceType">0</intProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
-            <stringProp name="scriptLanguage">groovy</stringProp>
-            <stringProp name="parameters"></stringProp>
-            <stringProp name="filename"></stringProp>
-            <stringProp name="cacheKey">true</stringProp>
-            <stringProp name="script">import groovy.json.JsonSlurper
-import java.nio.file.Files
-import java.nio.file.Paths
-
-// Obtener variables del CSV Data Set Config
-def dato = vars.get(&quot;uniqueIDRS&quot;)
-log.info(&quot;Valor de uniqueIDRS: &quot; + dato)
-
-// Verificar que la variable &apos;uniqueIDRS&apos; no es nula
-if (dato == null) {
-    log.error(&quot;La variable &apos;uniqueIDRS&apos; es nula&quot;)
-} else {
-    // Definir el archivo de log
-    def logFilePath = /C:\Users\alejandra.ospina\Documents\GitHub\test_performance\Esytec\Ejecucion\Carga\Logs\salidas.log/
-    def logFile = new File(logFilePath)
-
-    // Crear el mensaje de log
-    def logMessage = &quot;Último dato utilizado: uniqueIDRS=${dato}\n&quot;
-
-    // Escribir el mensaje en el archivo de log utilizando FileWriter en modo append
-    FileWriter fw = null
-    try {
-        fw = new FileWriter(logFile, true)
-        fw.write(logMessage)
-        fw.flush()
-        log.info(&quot;Log actualizado: &quot; + logMessage)
-    } catch (IOException e) {
-        log.error(&quot;Error al escribir en el archivo de log&quot;, e)
-    } finally {
-        if (fw != null) {
-            try {
-                fw.close()
-            } catch (IOException e) {
-                log.error(&quot;Error al cerrar FileWriter&quot;, e)
-            }
-        }
-    }
-}
-</stringProp>
-          </JSR223PostProcessor>
-          <hashTree/>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="delimiter">;</stringProp>
-            <stringProp name="fileEncoding">UTF-8</stringProp>
-            <stringProp name="filename">C:/Users/alejandra.ospina/Documents/GitHub/test_performance/Esytec/Diseño/Data/registrarSalida.csv</stringProp>
-            <boolProp name="ignoreFirstLine">true</boolProp>
-            <boolProp name="quotedData">false</boolProp>
-            <boolProp name="recycle">true</boolProp>
-            <stringProp name="shareMode">shareMode.all</stringProp>
-            <boolProp name="stopThread">false</boolProp>
-            <stringProp name="variableNames">plateRS,parkingIdRS,uniqueIDRS,makeAutomaticPaymentRS</stringProp>
-          </CSVDataSet>
-          <hashTree/>
-          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
-            <stringProp name="cacheKey">true</stringProp>
-            <stringProp name="filename"></stringProp>
-            <stringProp name="parameters"></stringProp>
-            <stringProp name="script">import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Calendar
-
-// Formateador de fechas
-SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&quot;)
-
-// Crear la fecha final (hora actual más una hora, por ejemplo)
-Calendar calendar = Calendar.getInstance()
-calendar.add(Calendar.HOUR, 1)
-Date fechaFinal = calendar.getTime()
-
-// Formatear la fecha final
-String fechaFinalFormatted = sdf.format(fechaFinal)
-
-// Guardar la fecha final en variables de JMeter
-vars.put(&quot;fechaSalida&quot;, fechaFinalFormatted)
-</stringProp>
-            <stringProp name="scriptLanguage">groovy</stringProp>
-          </JSR223PreProcessor>
-          <hashTree/>
-          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
-            <stringProp name="ConstantTimer.delay">600</stringProp>
-            <stringProp name="RandomTimer.range">400</stringProp>
-          </UniformRandomTimer>
-          <hashTree/>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-            <collectionProp name="HeaderManager.headers">
-              <elementProp name="Accept" elementType="Header">
-                <stringProp name="Header.name">Accept</stringProp>
-                <stringProp name="Header.value">*/*</stringProp>
-              </elementProp>
-              <elementProp name="Accept-Encoding" elementType="Header">
-                <stringProp name="Header.name">Accept-Encoding</stringProp>
-                <stringProp name="Header.value">gzip, deflate, br</stringProp>
-              </elementProp>
-              <elementProp name="Authorization" elementType="Header">
-                <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">Bearer ${__P(accessToken)}</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">parking-id</stringProp>
-                <stringProp name="Header.value">${parkingIdRS}</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Content-Type</stringProp>
-                <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-            </collectionProp>
-          </HeaderManager>
-          <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49587">201</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-          </ResponseAssertion>
-          <hashTree/>
-          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="false">
-            <stringProp name="JSON_PATH">message</stringProp>
-            <stringProp name="EXPECTED_VALUE">Transacción</stringProp>
-            <boolProp name="JSONVALIDATION">true</boolProp>
-            <boolProp name="EXPECT_NULL">false</boolProp>
-            <boolProp name="INVERT">false</boolProp>
-            <boolProp name="ISREGEX">true</boolProp>
-          </JSONPathAssertion>
-          <hashTree/>
-          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
-            <stringProp name="JSON_PATH">unique_id</stringProp>
-            <stringProp name="EXPECTED_VALUE">null</stringProp>
-            <boolProp name="JSONVALIDATION">true</boolProp>
-            <boolProp name="EXPECT_NULL">false</boolProp>
-            <boolProp name="INVERT">false</boolProp>
-            <boolProp name="ISREGEX">true</boolProp>
-          </JSONPathAssertion>
-          <hashTree/>
-          <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="AggregateReportRegistrarSalida" enabled="true">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
-            <objProp>
-              <name>saveConfig</name>
-              <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
-                <timestamp>true</timestamp>
-                <success>true</success>
-                <label>true</label>
-                <code>true</code>
-                <message>true</message>
-                <threadName>true</threadName>
-                <dataType>true</dataType>
-                <encoding>false</encoding>
-                <assertions>true</assertions>
-                <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
-                <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
-                <responseDataOnError>false</responseDataOnError>
-                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
-                <url>true</url>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
-              </value>
-            </objProp>
-            <stringProp name="filename"></stringProp>
-          </ResultCollector>
-          <hashTree/>
-        </hashTree>
-      </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="registrarPagoApp" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <stringProp name="LoopController.loops">2</stringProp>
+          <intProp name="LoopController.loops">-1</intProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.delayedStart">true</boolProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <stringProp name="ThreadGroup.duration">420</stringProp>
-        <stringProp name="ThreadGroup.delay">180</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">100</stringProp>
+        <stringProp name="ThreadGroup.delay">500</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
       <hashTree>
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">1500</stringProp>
+          <stringProp name="RandomTimer.range">3000</stringProp>
+        </UniformRandomTimer>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+          <stringProp name="filename">C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Diseño/Data/registrarPagoApp.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">plateRPA,cdUsuarioSeg,cdVehiculo,username,password</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <stringProp name="delimiter">;</stringProp>
+          <boolProp name="quotedData">false</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="loginEnAppAFlypass" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -738,18 +556,6 @@ vars.put(&quot;fechaSalida&quot;, fechaFinalFormatted)
           <stringProp name="TestPlan.comments">Representa la autenticación del usuario en la app</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Diseño/Data/loginEnAppAFlypass.csv</stringProp>
-            <stringProp name="fileEncoding">UTF-8</stringProp>
-            <stringProp name="variableNames">username,password</stringProp>
-            <boolProp name="ignoreFirstLine">true</boolProp>
-            <stringProp name="delimiter">;</stringProp>
-            <boolProp name="quotedData">false</boolProp>
-            <boolProp name="recycle">true</boolProp>
-            <boolProp name="stopThread">false</boolProp>
-            <stringProp name="shareMode">shareMode.all</stringProp>
-          </CSVDataSet>
-          <hashTree/>
           <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
@@ -834,18 +640,6 @@ vars.put(&quot;fechaSalida&quot;, fechaFinalFormatted)
           <stringProp name="TestPlan.comments">consultar el servicio en curso que está activo para el vehiculo</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Diseño/Data/registrarPagoApp.csv</stringProp>
-            <stringProp name="fileEncoding">UTF-8</stringProp>
-            <stringProp name="variableNames">plateRPA,cdUsuarioSeg,cdVehiculo</stringProp>
-            <boolProp name="ignoreFirstLine">true</boolProp>
-            <stringProp name="delimiter">;</stringProp>
-            <boolProp name="quotedData">false</boolProp>
-            <boolProp name="recycle">true</boolProp>
-            <boolProp name="stopThread">false</boolProp>
-            <stringProp name="shareMode">shareMode.all</stringProp>
-          </CSVDataSet>
-          <hashTree/>
           <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="Accept" elementType="Header">
@@ -901,7 +695,7 @@ vars.put(&quot;fechaSalida&quot;, fechaFinalFormatted)
           </JSR223PostProcessor>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="consultarMovimientosPorPlacaId" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="consultarMovimientos" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
@@ -961,105 +755,6 @@ vars.put(&quot;fechaSalida&quot;, fechaFinalFormatted)
               <elementProp name="Authorization" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
                 <stringProp name="Header.value">Bearer ${__P(accessToken)}</stringProp>
-              </elementProp>
-            </collectionProp>
-          </HeaderManager>
-          <hashTree/>
-          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="false">
-            <stringProp name="JSON_PATH">message</stringProp>
-            <stringProp name="EXPECTED_VALUE">Transacción</stringProp>
-            <boolProp name="JSONVALIDATION">true</boolProp>
-            <boolProp name="EXPECT_NULL">false</boolProp>
-            <boolProp name="INVERT">false</boolProp>
-            <boolProp name="ISREGEX">true</boolProp>
-          </JSONPathAssertion>
-          <hashTree/>
-        </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="getPayment" enabled="false">
-          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain">${urlCertSecu}</stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
-          <stringProp name="HTTPSampler.path">${apiEsytec}/setPayment/${varPaymentId}</stringProp>
-          <stringProp name="HTTPSampler.method">OPTIONS</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
-          <boolProp name="HTTPSampler.image_parser">false</boolProp>
-          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
-          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
-          <boolProp name="HTTPSampler.md5">false</boolProp>
-          <intProp name="HTTPSampler.ipSourceType">0</intProp>
-          <stringProp name="TestPlan.comments">pagar desde app</stringProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-            <collectionProp name="HeaderManager.headers">
-              <elementProp name="Accept" elementType="Header">
-                <stringProp name="Header.name">Accept</stringProp>
-                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
-              </elementProp>
-              <elementProp name="Accept-Encoding" elementType="Header">
-                <stringProp name="Header.name">Accept-Encoding</stringProp>
-                <stringProp name="Header.value">gzip, deflate, br, zstd</stringProp>
-              </elementProp>
-              <elementProp name="Authorization" elementType="Header">
-                <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">Bearer ${varAccessTokenApp}</stringProp>
-              </elementProp>
-              <elementProp name="accept-language" elementType="Header">
-                <stringProp name="Header.name">accept-language</stringProp>
-                <stringProp name="Header.value">es-US,es;q=0.9,en-US;q=0.8,en;q=0.7</stringProp>
-              </elementProp>
-              <elementProp name="content-type" elementType="Header">
-                <stringProp name="Header.name">content-type</stringProp>
-                <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-            </collectionProp>
-          </HeaderManager>
-          <hashTree/>
-          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="false">
-            <stringProp name="filename"></stringProp>
-            <stringProp name="parameters"></stringProp>
-            <boolProp name="resetInterpreter">false</boolProp>
-            <stringProp name="script">import org.apache.commons.io.FileUtils;
-import java.io.File;
-String filePath = &quot;C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Diseño/Data/pagoApp.json&quot;; // Ruta completa al archivo
-File file = new File(filePath);
-String body = FileUtils.readFileToString(file, &quot;UTF-8&quot;);
-vars.put(&quot;requestBody&quot;, body);
-</stringProp>
-          </BeanShellPreProcessor>
-          <hashTree/>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="false">
-            <collectionProp name="HeaderManager.headers">
-              <elementProp name="Accept" elementType="Header">
-                <stringProp name="Header.name">Accept</stringProp>
-                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
-              </elementProp>
-              <elementProp name="Accept-Encoding" elementType="Header">
-                <stringProp name="Header.name">Accept-Encoding</stringProp>
-                <stringProp name="Header.value">gzip, deflate, br, zstd</stringProp>
-              </elementProp>
-              <elementProp name="Authorization" elementType="Header">
-                <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">Bearer ${__P(accessToken)}</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">accept-language</stringProp>
-                <stringProp name="Header.value">es-US,es;q=0.9,en-US;q=0.8,en;q=0.7</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">content-type</stringProp>
-                <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">content-length</stringProp>
-                <stringProp name="Header.value">72975</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
@@ -1140,57 +835,191 @@ vars.put(&quot;requestBody&quot;, body);
 </stringProp>
           </BeanShellPreProcessor>
           <hashTree/>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="false">
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="registrarSalidaPagoManual" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <intProp name="LoopController.loops">-1</intProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">80</stringProp>
+        <stringProp name="ThreadGroup.delay">520</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="registrarSalidaPagoManual" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;plate&quot; : &quot;${plateRS}&quot;,&#xd;
+    &quot;parking_id&quot; : &quot;${parkingIdRS}&quot;,&#xd;
+    &quot;unique_id&quot; : &quot;${uniqueIDRS}&quot;,&#xd;
+    &quot;parking_departure_date&quot;: &quot;${fechaSalida}&quot;,&#xd;
+    &quot;make_automatic_payment&quot;: ${makeAutomaticPaymentRS}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${urlCertSecu}</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">${apiEsytec}/track/vehicle</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Calendar
+
+// Formateador de fechas
+SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&quot;)
+
+// Crear la fecha final (hora actual más una hora, por ejemplo)
+Calendar calendar = Calendar.getInstance()
+calendar.add(Calendar.HOUR, 1)
+Date fechaFinal = calendar.getTime()
+
+// Formatear la fecha final
+String fechaFinalFormatted = sdf.format(fechaFinal)
+
+// Guardar la fecha final en variables de JMeter
+vars.put(&quot;fechaSalida&quot;, fechaFinalFormatted)
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="delimiter">;</stringProp>
+            <stringProp name="fileEncoding">UTF-8</stringProp>
+            <stringProp name="filename">C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Diseño/Data/registrarSalidaPagoManual.csv</stringProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames">plateRS,parkingIdRS,uniqueIDRS,makeAutomaticPaymentRS</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">600</stringProp>
+            <stringProp name="RandomTimer.range">400</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="Accept" elementType="Header">
                 <stringProp name="Header.name">Accept</stringProp>
-                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
               </elementProp>
               <elementProp name="Accept-Encoding" elementType="Header">
                 <stringProp name="Header.name">Accept-Encoding</stringProp>
-                <stringProp name="Header.value">gzip, deflate, br, zstd</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
               </elementProp>
               <elementProp name="Authorization" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
                 <stringProp name="Header.value">Bearer ${__P(accessToken)}</stringProp>
               </elementProp>
               <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">accept-language</stringProp>
-                <stringProp name="Header.value">es-US,es;q=0.9,en-US;q=0.8,en;q=0.7</stringProp>
+                <stringProp name="Header.name">parking-id</stringProp>
+                <stringProp name="Header.value">${parkingIdRS}</stringProp>
               </elementProp>
               <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.name">Content-Type</stringProp>
                 <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">content-length</stringProp>
-                <stringProp name="Header.value">72975</stringProp>
               </elementProp>
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="false">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49587">201</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
             <stringProp name="JSON_PATH">message</stringProp>
-            <stringProp name="EXPECTED_VALUE">Transacción</stringProp>
+            <stringProp name="EXPECTED_VALUE">Transacción procesada con exito</stringProp>
             <boolProp name="JSONVALIDATION">true</boolProp>
             <boolProp name="EXPECT_NULL">false</boolProp>
             <boolProp name="INVERT">false</boolProp>
             <boolProp name="ISREGEX">true</boolProp>
           </JSONPathAssertion>
           <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import java.io.FileWriter
+import java.io.BufferedWriter
+import java.io.PrintWriter
+
+// Variables de JMeter
+String placa = vars.get(&quot;plateRS&quot;)
+String ingresoId = vars.get(&quot;uniqueIDRS&quot;)
+String response = prev.getResponseDataAsString()
+
+// Ruta del archivo de salida
+String manualPaymentFile = &quot;C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Ejecucion/Logs/registrarSalidaPagoManual.txt&quot;
+
+// Verificar si la respuesta contiene &quot;Transacción procesada con éxito&quot;
+boolean isManualPaymentSuccess = response.contains(&quot;Transacción procesada con exito&quot;)
+
+if (isManualPaymentSuccess) {
+    // Si la respuesta contiene &quot;Transacción procesada con éxito&quot;, guardar en el archivo registrarSalidaPagoManual.txt
+    FileWriter fileWriter = new FileWriter(manualPaymentFile, true)
+    BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)
+    PrintWriter printWriter = new PrintWriter(bufferedWriter)
+
+    printWriter.println(&quot;Placa: &quot; + placa + &quot;, uniqueIDRS: &quot; + ingresoId + &quot;, Response: &quot; + response)
+
+    printWriter.close()
+    bufferedWriter.close()
+    fileWriter.close()
+}
+
+</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="registrarMedioDePago" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="medioDePago" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <stringProp name="LoopController.loops">1</stringProp>
+          <intProp name="LoopController.loops">-1</intProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.delayedStart">true</boolProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
-        <stringProp name="ThreadGroup.duration">420</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">1</stringProp>
         <stringProp name="ThreadGroup.delay">180</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
@@ -1507,24 +1336,381 @@ vars.put(&quot;requestBody&quot;, body);
             <boolProp name="ISREGEX">true</boolProp>
           </JSONPathAssertion>
           <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">600</stringProp>
+            <stringProp name="RandomTimer.range">400</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+        </hashTree>
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">600</stringProp>
+          <stringProp name="RandomTimer.range">400</stringProp>
+        </UniformRandomTimer>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="consultarMedioDePago" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${urlCertSecu}</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">flypass/bancolombia-integration/paymentMethod/true</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
+          <stringProp name="TestPlan.comments">inactivar un medio de pago</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor" enabled="false">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">import org.apache.commons.io.FileUtils;
+import java.io.File;
+String filePath = &quot;C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Diseño/Data/pagoApp.json&quot;; // Ruta completa al archivo
+File file = new File(filePath);
+String body = FileUtils.readFileToString(file, &quot;UTF-8&quot;);
+vars.put(&quot;requestBody&quot;, body);
+</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br, zstd</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${varAccessTokenApp}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">accept-language</stringProp>
+                <stringProp name="Header.value">es-US,es;q=0.9,en-US;q=0.8,en;q=0.7</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="false">
+            <stringProp name="JSON_PATH">message</stringProp>
+            <stringProp name="EXPECTED_VALUE">Transacción</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+        </hashTree>
+        <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+          <stringProp name="ConstantTimer.delay">600</stringProp>
+          <stringProp name="RandomTimer.range">400</stringProp>
+        </UniformRandomTimer>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="inactivarMedioDePago" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+   &quot;id&quot;:null,&#xd;
+   &quot;user&quot;:{&#xd;
+      &quot;id&quot;:39764,&#xd;
+      &quot;secureUser&quot;:{&#xd;
+         &quot;id&quot;:40289,&#xd;
+         &quot;person&quot;:{&#xd;
+            &quot;id&quot;:41560,&#xd;
+            &quot;documentType&quot;:2,&#xd;
+            &quot;document&quot;:&quot;10244168&quot;,&#xd;
+            &quot;names&quot;:&quot;Rober&quot;,&#xd;
+            &quot;surnames&quot;:&quot;Ospina&quot;,&#xd;
+            &quot;cellphone&quot;:&quot;3005609911&quot;,&#xd;
+            &quot;businessName&quot;:null,&#xd;
+            &quot;capitalizeName&quot;:&quot;Rober&quot;,&#xd;
+            &quot;fullName&quot;:&quot;Rober Ospina&quot;&#xd;
+         },&#xd;
+         &quot;login&quot;:&quot;10244168&quot;&#xd;
+      }&#xd;
+   },&#xd;
+   &quot;registrationDate&quot;:null,&#xd;
+   &quot;productType&quot;:{&#xd;
+      &quot;id&quot;:0,&#xd;
+      &quot;name&quot;:&quot;Cuenta Ahorros&quot;,&#xd;
+      &quot;description&quot;:&quot;Producto con la cuenta de ahorros que enrola el usuario&quot;&#xd;
+   },&#xd;
+   &quot;suffixAccount&quot;:null,&#xd;
+   &quot;customName&quot;:&quot;testPer&quot;,&#xd;
+   &quot;status&quot;:null,&#xd;
+   &quot;signature&quot;:null,&#xd;
+   &quot;accountNumber&quot;:&quot;12333333333&quot;,&#xd;
+   &quot;identityCard&quot;:&quot;10244168&quot;,&#xd;
+   &quot;idProductFlypass&quot;:null,&#xd;
+   &quot;attemptOTP&quot;:null,&#xd;
+   &quot;attemptGenerateOTP&quot;:null,&#xd;
+   &quot;cvc&quot;:null,&#xd;
+   &quot;expireMonth&quot;:null,&#xd;
+   &quot;expireYear&quot;:null,&#xd;
+   &quot;quotasNumber&quot;:null,&#xd;
+   &quot;franchise&quot;:null,&#xd;
+   &quot;unlockDate&quot;:null,&#xd;
+   &quot;paymentSource&quot;:null,&#xd;
+   &quot;used&quot;:false,&#xd;
+   &quot;paymentMethodType&quot;:{&#xd;
+      &quot;id&quot;:0&#xd;
+   },&#xd;
+   &quot;enrolled&quot;:false&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${urlCertSecu}</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">flypass/bancolombia-integration/paymentMethod</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
+          <stringProp name="TestPlan.comments">inactivar un medio de pago</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br, zstd</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${varAccessTokenApp}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">accept-language</stringProp>
+                <stringProp name="Header.value">es-US,es;q=0.9,en-US;q=0.8,en;q=0.7</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="registrarSalidaSinEntrada" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="registrarSalidaPagoAutomatico" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <stringProp name="LoopController.loops">1</stringProp>
+          <intProp name="LoopController.loops">-1</intProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">1</stringProp>
         <boolProp name="ThreadGroup.delayedStart">true</boolProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration">300</stringProp>
         <stringProp name="ThreadGroup.delay">300</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="trackVehicleExitOutEntry" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="registrarSalidaPagoAutomatico" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;plate&quot; : &quot;${plateRSA}&quot;,&#xd;
+    &quot;parking_id&quot; : &quot;${parkingIdRSA}&quot;,&#xd;
+    &quot;unique_id&quot; : &quot;${uniqueIDRSA}&quot;,&#xd;
+    &quot;parking_departure_date&quot;: &quot;${fechaSalida}&quot;,&#xd;
+    &quot;make_automatic_payment&quot;: ${makeAutomaticPaymentRSA}&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${urlCertSecu}</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">${apiEsytec}/track/vehicle</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+            <stringProp name="delimiter">;</stringProp>
+            <stringProp name="fileEncoding">UTF-8</stringProp>
+            <stringProp name="filename">C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Diseño/Data/registrarSalidaPagoAutomatico.csv</stringProp>
+            <boolProp name="ignoreFirstLine">true</boolProp>
+            <boolProp name="quotedData">false</boolProp>
+            <boolProp name="recycle">true</boolProp>
+            <stringProp name="shareMode">shareMode.all</stringProp>
+            <boolProp name="stopThread">false</boolProp>
+            <stringProp name="variableNames">plateRSA,parkingIdRSA,uniqueIDRSA,makeAutomaticPaymentRSA</stringProp>
+          </CSVDataSet>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Calendar
+
+// Formateador de fechas
+SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ss&quot;)
+
+// Crear la fecha final (hora actual más una hora, por ejemplo)
+Calendar calendar = Calendar.getInstance()
+calendar.add(Calendar.HOUR, 1)
+Date fechaFinal = calendar.getTime()
+
+// Formatear la fecha final
+String fechaFinalFormatted = sdf.format(fechaFinal)
+
+// Guardar la fecha final en variables de JMeter
+vars.put(&quot;fechaSalida&quot;, fechaFinalFormatted)
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">600</stringProp>
+            <stringProp name="RandomTimer.range">400</stringProp>
+          </UniformRandomTimer>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__P(accessToken)}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">parking-id</stringProp>
+                <stringProp name="Header.value">${parkingIdRS}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49587">201</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
+            <stringProp name="JSON_PATH">message</stringProp>
+            <stringProp name="EXPECTED_VALUE">Transacción procesada con exito</stringProp>
+            <boolProp name="JSONVALIDATION">true</boolProp>
+            <boolProp name="EXPECT_NULL">false</boolProp>
+            <boolProp name="INVERT">false</boolProp>
+            <boolProp name="ISREGEX">true</boolProp>
+          </JSONPathAssertion>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import java.io.FileWriter
+import java.io.BufferedWriter
+import java.io.PrintWriter
+
+// Variables de JMeter
+String placa = vars.get(&quot;plateRSA&quot;)
+String ingresoId = vars.get(&quot;uniqueIDRSA&quot;)
+String response = prev.getResponseDataAsString()
+
+// Ruta del archivo de salida
+String manualPaymentFile = &quot;C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Ejecucion/Logs/registrarSalidaPagoAutomatico.txt&quot;
+
+// Verificar si la respuesta contiene &quot;Transacción procesada con éxito&quot;
+boolean isManualPaymentSuccess = response.contains(&quot;Transacción procesada con exito&quot;)
+
+if (isManualPaymentSuccess) {
+    // Si la respuesta contiene &quot;Transacción procesada con éxito&quot;, guardar en el archivo registrarSalidaPagoManual.txt
+    FileWriter fileWriter = new FileWriter(manualPaymentFile, true)
+    BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)
+    PrintWriter printWriter = new PrintWriter(bufferedWriter)
+
+    printWriter.println(&quot;Placa: &quot; + placa + &quot;, uniqueIDRSA: &quot; + ingresoId + &quot;, Response: &quot; + response)
+
+    printWriter.close()
+    bufferedWriter.close()
+    fileWriter.close()
+}
+</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="registrarSalidaSinEntrada" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <intProp name="LoopController.loops">-1</intProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">200</stringProp>
+        <stringProp name="ThreadGroup.delay">400</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="registrarEntradaSinSalida" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
             <collectionProp name="Arguments.arguments">
@@ -1555,58 +1741,13 @@ vars.put(&quot;requestBody&quot;, body);
           <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
           <boolProp name="HTTPSampler.md5">false</boolProp>
           <intProp name="HTTPSampler.ipSourceType">0</intProp>
+          <stringProp name="TestPlan.comments">simula la salida del parqueadero sin haber realizado un ingreso previo</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
-            <stringProp name="scriptLanguage">groovy</stringProp>
-            <stringProp name="parameters"></stringProp>
-            <stringProp name="filename"></stringProp>
-            <stringProp name="cacheKey">true</stringProp>
-            <stringProp name="script">import groovy.json.JsonSlurper
-import java.nio.file.Files
-import java.nio.file.Paths
-
-// Obtener variables del CSV Data Set Config
-def dato = vars.get(&quot;uniqueIDRSSE&quot;)
-log.info(&quot;Valor de uniqueIDRSSE: &quot; + dato)
-
-// Verificar que la variable &apos;uniqueIDRS&apos; no es nula
-if (dato == null) {
-    log.error(&quot;La variable &apos;uniqueIDRSSE&apos; es nula&quot;)
-} else {
-    // Definir el archivo de log
-    def logFilePath = /C:\Users\alejandra.ospina\Documents\GitHub\test_performance\Esytec\Ejecucion\Carga\Logs\salidasSinEntradas.log/
-    def logFile = new File(logFilePath)
-
-    // Crear el mensaje de log
-    def logMessage = &quot;Último dato utilizado: uniqueIDRSSE=${dato}\n&quot;
-
-    // Escribir el mensaje en el archivo de log utilizando FileWriter en modo append
-    FileWriter fw = null
-    try {
-        fw = new FileWriter(logFile, true)
-        fw.write(logMessage)
-        fw.flush()
-        log.info(&quot;Log actualizado: &quot; + logMessage)
-    } catch (IOException e) {
-        log.error(&quot;Error al escribir en el archivo de log&quot;, e)
-    } finally {
-        if (fw != null) {
-            try {
-                fw.close()
-            } catch (IOException e) {
-                log.error(&quot;Error al cerrar FileWriter&quot;, e)
-            }
-        }
-    }
-}
-</stringProp>
-          </JSR223PostProcessor>
-          <hashTree/>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
             <stringProp name="delimiter">;</stringProp>
             <stringProp name="fileEncoding">UTF-8</stringProp>
-            <stringProp name="filename">C:/Users/alejandra.ospina/Documents/GitHub/test_performance/Esytec/Diseño/Data/registrarSalidaSinSalida.csv</stringProp>
+            <stringProp name="filename">C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Diseño/Data/registrarSalidaSinEntrada.csv</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
             <boolProp name="quotedData">false</boolProp>
             <boolProp name="recycle">true</boolProp>
@@ -1680,64 +1821,53 @@ vars.put(&quot;fechaSalida&quot;, fechaFinalFormatted)
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="false">
-            <stringProp name="JSON_PATH">message</stringProp>
-            <stringProp name="EXPECTED_VALUE">Transacción</stringProp>
-            <boolProp name="JSONVALIDATION">true</boolProp>
-            <boolProp name="EXPECT_NULL">false</boolProp>
-            <boolProp name="INVERT">false</boolProp>
-            <boolProp name="ISREGEX">true</boolProp>
-          </JSONPathAssertion>
-          <hashTree/>
           <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="JSON Assertion" enabled="true">
-            <stringProp name="JSON_PATH">unique_id</stringProp>
-            <stringProp name="EXPECTED_VALUE">null</stringProp>
+            <stringProp name="JSON_PATH">message</stringProp>
+            <stringProp name="EXPECTED_VALUE">Transacción procesada con exito</stringProp>
             <boolProp name="JSONVALIDATION">true</boolProp>
             <boolProp name="EXPECT_NULL">false</boolProp>
             <boolProp name="INVERT">false</boolProp>
             <boolProp name="ISREGEX">true</boolProp>
           </JSONPathAssertion>
           <hashTree/>
-          <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="AggregateReportRegistrarSalidaSinEntrada" enabled="true">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
-            <objProp>
-              <name>saveConfig</name>
-              <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
-                <timestamp>true</timestamp>
-                <success>true</success>
-                <label>true</label>
-                <code>true</code>
-                <message>true</message>
-                <threadName>true</threadName>
-                <dataType>true</dataType>
-                <encoding>false</encoding>
-                <assertions>true</assertions>
-                <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
-                <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
-                <responseDataOnError>false</responseDataOnError>
-                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
-                <url>true</url>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
-              </value>
-            </objProp>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
             <stringProp name="filename"></stringProp>
-          </ResultCollector>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import java.io.FileWriter
+import java.io.BufferedWriter
+import java.io.PrintWriter
+
+// Variables de JMeter
+String placa = vars.get(&quot;plateRSSE&quot;)
+String ingresoId = vars.get(&quot;uniqueIDRSSE&quot;)
+String response = prev.getResponseDataAsString()
+
+// Ruta del archivo de salida
+String manualPaymentFile = &quot;C:/Users/alejandra.ospina/Documents/GitHub/testing-performance-ezytec/Ejecucion/Logs/registrarSalidasSinEntradas.txt&quot;
+
+// Verificar si la respuesta contiene &quot;Transacción procesada con éxito&quot;
+boolean isManualPaymentSuccess = response.contains(&quot;Transacción procesada con exito&quot;)
+
+if (isManualPaymentSuccess) {
+    // Si la respuesta contiene &quot;Transacción procesada con éxito&quot;, guardar en el archivo registrarSalidaPagoManual.txt
+    FileWriter fileWriter = new FileWriter(manualPaymentFile, true)
+    BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)
+    PrintWriter printWriter = new PrintWriter(bufferedWriter)
+
+    printWriter.println(&quot;Placa: &quot; + placa + &quot;, uniqueIDRSSE: &quot; + ingresoId + &quot;, Response: &quot; + response)
+
+    printWriter.close()
+    bufferedWriter.close()
+    fileWriter.close()
+}
+</stringProp>
+          </JSR223PostProcessor>
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="AggregateReportGeneral" enabled="true">
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -1774,7 +1904,7 @@ vars.put(&quot;fechaSalida&quot;, fechaFinalFormatted)
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="AggregateReportGeneral" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
