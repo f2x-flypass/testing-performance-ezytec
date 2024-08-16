@@ -1,0 +1,215 @@
+Placa: ADE362, uniqueIDRSSE: PDPPSSEV8122053, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC522, uniqueIDRSSE: PDPPSSEV8122054, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBD015, uniqueIDRSSE: PDPPSSEV8122055, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEB446, uniqueIDRSSE: PDPPSSEV8122056, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAD869, uniqueIDRSSE: PDPPSSEV8122057, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BDA897, uniqueIDRSSE: PDPPSSEV8122058, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ADE776, uniqueIDRSSE: PDPPSSEV8122059, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCE419, uniqueIDRSSE: PDPPSSEV8122060, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAD824, uniqueIDRSSE: PDPPSSEV8122061, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ABB093, uniqueIDRSSE: PDPPSSEV8122062, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEB570, uniqueIDRSSE: PDPPSSEV8122063, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BAA794, uniqueIDRSSE: PDPPSSEV8122064, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BAA009, uniqueIDRSSE: PDPPSSEV8122065, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEB136, uniqueIDRSSE: PDPPSSEV8122066, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEB137, uniqueIDRSSE: PDPPSSEV8122067, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC218, uniqueIDRSSE: PDPPSSEV8122068, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEB572, uniqueIDRSSE: PDPPSSEV8122069, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ABA783, uniqueIDRSSE: PDPPSSEV8122070, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCE940, uniqueIDRSSE: PDPPSSEV8122071, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAD561, uniqueIDRSSE: PDPPSSEV8122072, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC152, uniqueIDRSSE: PDPPSSEV8122073, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCE422, uniqueIDRSSE: PDPPSSEV8122074, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCE941, uniqueIDRSSE: PDPPSSEV8122075, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBD133, uniqueIDRSSE: PDPPSSEV8122076, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAD562, uniqueIDRSSE: PDPPSSEV8122077, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEB057, uniqueIDRSSE: PDPPSSEV8122078, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BAA798, uniqueIDRSSE: PDPPSSEV8122079, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC154, uniqueIDRSSE: PDPPSSEV8122080, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BAA799, uniqueIDRSSE: PDPPSSEV8122081, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ABA876, uniqueIDRSSE: PDPPSSEV8122082, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAD563, uniqueIDRSSE: PDPPSSEV8122083, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BAA846, uniqueIDRSSE: PDPPSSEV8122084, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACD381, uniqueIDRSSE: PDPPSSEV8122085, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEC358, uniqueIDRSSE: PDPPSSEV8122086, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: AAE735, uniqueIDRSSE: PDPPSSEV8122087, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: AEB512, uniqueIDRSSE: PDPPSSEV8122088, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ABA800, uniqueIDRSSE: PDPPSSEV8122089, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC691, uniqueIDRSSE: PDPPSSEV8122090, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BDB973, uniqueIDRSSE: PDPPSSEV8122091, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEB209, uniqueIDRSSE: PDPPSSEV8122092, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBC584, uniqueIDRSSE: PDPPSSEV8122093, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAC164, uniqueIDRSSE: PDPPSSEV8122094, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCE374, uniqueIDRSSE: PDPPSSEV8122095, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEB235, uniqueIDRSSE: PDPPSSEV8122096, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBB591, uniqueIDRSSE: PDPPSSEV8122097, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAC061, uniqueIDRSSE: PDPPSSEV8122098, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBC277, uniqueIDRSSE: PDPPSSEV8122099, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCE052, uniqueIDRSSE: PDPPSSEV8122100, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBB594, uniqueIDRSSE: PDPPSSEV8122101, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBC280, uniqueIDRSSE: PDPPSSEV8122102, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBB596, uniqueIDRSSE: PDPPSSEV8122103, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBC281, uniqueIDRSSE: PDPPSSEV8122104, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: AAE345, uniqueIDRSSE: PDPPSSEV8122105, Response: 
+Placa: CAC890, uniqueIDRSSE: PDPPSSEV8122106, Response: 
+Placa: BBC454, uniqueIDRSSE: PDPPSSEV8122107, Response: 
+Placa: CAE256, uniqueIDRSSE: PDPPSSEV8122108, Response: 
+Placa: BAB930, uniqueIDRSSE: PDPPSSEV8122109, Response: 
+Placa: ACD160, uniqueIDRSSE: PDPPSSEV8122110, Response: 
+Placa: BEE224, uniqueIDRSSE: PDPPSSEV8122111, Response: 
+Placa: BDC345, uniqueIDRSSE: PDPPSSEV8122112, Response: 
+Placa: BEC102, uniqueIDRSSE: PDPPSSEV8122113, Response: 
+Placa: ACD161, uniqueIDRSSE: PDPPSSEV8122114, Response: 
+Placa: ADA186, uniqueIDRSSE: PDPPSSEV8122115, Response: 
+Placa: ABB291, uniqueIDRSSE: PDPPSSEV8122116, Response: 
+Placa: BBD609, uniqueIDRSSE: PDPPSSEV8122117, Response: 
+Placa: ADA131, uniqueIDRSSE: PDPPSSEV8122118, Response: 
+Placa: BEE142, uniqueIDRSSE: PDPPSSEV8122119, Response: 
+Placa: BAD638, uniqueIDRSSE: PDPPSSEV8122120, Response: 
+Placa: ABE962, uniqueIDRSSE: PDPPSSEV8122121, Response: 
+Placa: ABE963, uniqueIDRSSE: PDPPSSEV8122122, Response: 
+Placa: BAA454, uniqueIDRSSE: PDPPSSEV8122123, Response: 
+Placa: BEA877, uniqueIDRSSE: PDPPSSEV8122124, Response: 
+Placa: CAA418, uniqueIDRSSE: PDPPSSEV8122125, Response: 
+Placa: AAB236, uniqueIDRSSE: PDPPSSEV8122126, Response: 
+Placa: ADD603, uniqueIDRSSE: PDPPSSEV8122127, Response: 
+Placa: AAE967, uniqueIDRSSE: PDPPSSEV8122128, Response: 
+Placa: BCC165, uniqueIDRSSE: PDPPSSEV8122129, Response: 
+Placa: AAB669, uniqueIDRSSE: PDPPSSEV8122130, Response: 
+Placa: BAD836, uniqueIDRSSE: PDPPSSEV8122131, Response: 
+Placa: ADA301, uniqueIDRSSE: PDPPSSEV8122132, Response: 
+Placa: BEB137, uniqueIDRSSE: PDPTPSSE8122067, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACC218, uniqueIDRSSE: PDPTPSSE8122068, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEB572, uniqueIDRSSE: PDPTPSSE8122069, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ABA783, uniqueIDRSSE: PDPTPSSE8122070, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCE940, uniqueIDRSSE: PDPTPSSE8122071, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: CAD561, uniqueIDRSSE: PDPTPSSE8122072, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACC152, uniqueIDRSSE: PDPTPSSE8122073, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCE422, uniqueIDRSSE: PDPTPSSE8122074, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCE941, uniqueIDRSSE: PDPTPSSE8122075, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BBD133, uniqueIDRSSE: PDPTPSSE8122076, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: CAD562, uniqueIDRSSE: PDPTPSSE8122077, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEB057, uniqueIDRSSE: PDPTPSSE8122078, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BAA798, uniqueIDRSSE: PDPTPSSE8122079, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACC154, uniqueIDRSSE: PDPTPSSE8122080, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BAA799, uniqueIDRSSE: PDPTPSSE8122081, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ABA876, uniqueIDRSSE: PDPTPSSE8122082, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: CAD563, uniqueIDRSSE: PDPTPSSE8122083, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BAA846, uniqueIDRSSE: PDPTPSSE8122084, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACD381, uniqueIDRSSE: PDPTPSSE8122085, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEC358, uniqueIDRSSE: PDPTPSSE8122086, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AAE735, uniqueIDRSSE: PDPTPSSE8122087, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AEB512, uniqueIDRSSE: PDPTPSSE8122088, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ABA800, uniqueIDRSSE: PDPTPSSE8122089, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACC691, uniqueIDRSSE: PDPTPSSE8122090, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BDB973, uniqueIDRSSE: PDPTPSSE8122091, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEB209, uniqueIDRSSE: PDPTPSSE8122092, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BBC584, uniqueIDRSSE: PDPTPSSE8122093, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: CAC164, uniqueIDRSSE: PDPTPSSE8122094, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCE374, uniqueIDRSSE: PDPTPSSE8122095, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEB235, uniqueIDRSSE: PDPTPSSE8122096, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+-------------------Segundo intentoPlaca: CAC613, uniqueIDRSSE: PDPTPSSESI8152024, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AAE802, uniqueIDRSSE: PDPTPSSESI8152025, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: CAC215, uniqueIDRSSE: PDPTPSSESI8152026, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACB409, uniqueIDRSSE: PDPTPSSESI8152027, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AAE596, uniqueIDRSSE: PDPTPSSESI8152028, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BAD816, uniqueIDRSSE: PDPTPSSESI8152029, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACB530, uniqueIDRSSE: PDPTPSSESI8152030, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACB431, uniqueIDRSSE: PDPTPSSESI8152031, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ADD320, uniqueIDRSSE: PDPTPSSESI8152032, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCD677, uniqueIDRSSE: PDPTPSSESI8152033, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEA399, uniqueIDRSSE: PDPTPSSESI8152034, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCD703, uniqueIDRSSE: PDPTPSSESI8152035, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ADA208, uniqueIDRSSE: PDPTPSSESI8152036, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACB278, uniqueIDRSSE: PDPTPSSESI8152037, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACB279, uniqueIDRSSE: PDPTPSSESI8152038, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BAA026, uniqueIDRSSE: PDPTPSSESI8152039, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AAC623, uniqueIDRSSE: PDPTPSSESI8152040, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AEA149, uniqueIDRSSE: PDPTPSSESI8152041, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BDD389, uniqueIDRSSE: PDPTPSSESI8152042, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: CAE228, uniqueIDRSSE: PDPTPSSESI8152043, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AAC625, uniqueIDRSSE: PDPTPSSESI8152044, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AEC781, uniqueIDRSSE: PDPTPSSESI8152045, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ADA999, uniqueIDRSSE: PDPTPSSESI8152046, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCB654, uniqueIDRSSE: PDPTPSSESI8152047, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ABE079, uniqueIDRSSE: PDPTPSSESI8152048, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ABE349, uniqueIDRSSE: PDPTPSSESI8152049, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BAE537, uniqueIDRSSE: PDPTPSSESI8152050, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BDD117, uniqueIDRSSE: PDPTPSSESI8152051, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ABE376, uniqueIDRSSE: PDPTPSSESI8152052, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ADE362, uniqueIDRSSE: PDPTPSSESI8152053, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACC522, uniqueIDRSSE: PDPTPSSESI8152054, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BBD015, uniqueIDRSSE: PDPTPSSESI8152055, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEB446, uniqueIDRSSE: PDPTPSSESI8152056, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: CAD869, uniqueIDRSSE: PDPTPSSESI8152057, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BDA897, uniqueIDRSSE: PDPTPSSESI8152058, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ADE776, uniqueIDRSSE: PDPTPSSESI8152059, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCE419, uniqueIDRSSE: PDPTPSSESI8152060, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: CAD824, uniqueIDRSSE: PDPTPSSESI8152061, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ABB093, uniqueIDRSSE: PDPTPSSESI8152062, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEB570, uniqueIDRSSE: PDPTPSSESI8152063, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BAA794, uniqueIDRSSE: PDPTPSSESI8152064, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BAA009, uniqueIDRSSE: PDPTPSSESI8152065, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEB136, uniqueIDRSSE: PDPTPSSESI8152066, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEB137, uniqueIDRSSE: PDPTPSSESI8152067, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACC218, uniqueIDRSSE: PDPTPSSESI8152068, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEB572, uniqueIDRSSE: PDPTPSSESI8152069, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ABA783, uniqueIDRSSE: PDPTPSSESI8152070, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCE940, uniqueIDRSSE: PDPTPSSESI8152071, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: CAD561, uniqueIDRSSE: PDPTPSSESI8152072, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACC152, uniqueIDRSSE: PDPTPSSESI8152073, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCE422, uniqueIDRSSE: PDPTPSSESI8152074, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCE941, uniqueIDRSSE: PDPTPSSESI8152075, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BBD133, uniqueIDRSSE: PDPTPSSESI8152076, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: CAD562, uniqueIDRSSE: PDPTPSSESI8152077, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEB057, uniqueIDRSSE: PDPTPSSESI8152078, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BAA798, uniqueIDRSSE: PDPTPSSESI8152079, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACC154, uniqueIDRSSE: PDPTPSSESI8152080, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BAA799, uniqueIDRSSE: PDPTPSSESI8152081, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ABA876, uniqueIDRSSE: PDPTPSSESI8152082, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: CAD563, uniqueIDRSSE: PDPTPSSESI8152083, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BAA846, uniqueIDRSSE: PDPTPSSESI8152084, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACD381, uniqueIDRSSE: PDPTPSSESI8152085, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEC358, uniqueIDRSSE: PDPTPSSESI8152086, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AAE735, uniqueIDRSSE: PDPTPSSESI8152087, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AEB512, uniqueIDRSSE: PDPTPSSESI8152088, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ABA800, uniqueIDRSSE: PDPTPSSESI8152089, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACC691, uniqueIDRSSE: PDPTPSSESI8152090, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BDB973, uniqueIDRSSE: PDPTPSSESI8152091, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEB209, uniqueIDRSSE: PDPTPSSESI8152092, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BBC584, uniqueIDRSSE: PDPTPSSESI8152093, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: CAC164, uniqueIDRSSE: PDPTPSSESI8152094, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCE374, uniqueIDRSSE: PDPTPSSESI8152095, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEB235, uniqueIDRSSE: PDPTPSSESI8152096, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BBB591, uniqueIDRSSE: PDPTPSSESI8152097, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BAA454, uniqueIDRSSE: PDPTPSSESI8152123, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEA877, uniqueIDRSSE: PDPTPSSESI8152124, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: CAA418, uniqueIDRSSE: PDPTPSSESI8152125, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AAB236, uniqueIDRSSE: PDPTPSSESI8152126, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ADD603, uniqueIDRSSE: PDPTPSSESI8152127, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AAE967, uniqueIDRSSE: PDPTPSSESI8152128, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCC165, uniqueIDRSSE: PDPTPSSESI8152129, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AAB669, uniqueIDRSSE: PDPTPSSESI8152130, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BAD836, uniqueIDRSSE: PDPTPSSESI8152131, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ADA301, uniqueIDRSSE: PDPTPSSESI8152132, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACA806, uniqueIDRSSE: PDPTPSSESI8152133, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BAC475, uniqueIDRSSE: PDPTPSSESI8152134, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: CAB772, uniqueIDRSSE: PDPTPSSESI8152135, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AEB415, uniqueIDRSSE: PDPTPSSESI8152136, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCA070, uniqueIDRSSE: PDPTPSSESI8152137, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ABD409, uniqueIDRSSE: PDPTPSSESI8152138, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AAA973, uniqueIDRSSE: PDPTPSSESI8152139, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: AAE045, uniqueIDRSSE: PDPTPSSESI8152140, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BBB309, uniqueIDRSSE: PDPTPSSESI8152141, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCC747, uniqueIDRSSE: PDPTPSSESI8152142, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ACD770, uniqueIDRSSE: PDPTPSSESI8152143, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BDE569, uniqueIDRSSE: PDPTPSSESI8152144, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BAD553, uniqueIDRSSE: PDPTPSSESI8152145, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BEE050, uniqueIDRSSE: PDPTPSSESI8152146, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ADB510, uniqueIDRSSE: PDPTPSSESI8152147, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCB965, uniqueIDRSSE: PDPTPSSESI8152148, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ADB511, uniqueIDRSSE: PDPTPSSESI8152149, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: BCB966, uniqueIDRSSE: PDPTPSSESI8152150, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ADB588, uniqueIDRSSE: PDPTPSSESI8152151, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ADB589, uniqueIDRSSE: PDPTPSSESI8152152, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: ABE747, uniqueIDRSSE: PDPTPSSESI8152153, Response: {"message":"Transacción sin ingreso","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}

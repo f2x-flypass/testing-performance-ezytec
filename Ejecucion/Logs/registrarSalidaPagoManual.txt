@@ -1,2 +1,4 @@
 Placa: RTQ843, uniqueIDRS: PDPEV28093028, Response: {"message":"Transacción procesada con exito","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
 Placa: SOP002, uniqueIDRS: PDPEV28093029, Response: {"message":"Transacción procesada con exito","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: MIT123, uniqueIDRS: PDPPAV8122024, Response: {"message":"Transacción procesada con exito","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+-----------------------------

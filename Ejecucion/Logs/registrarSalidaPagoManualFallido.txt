@@ -1,0 +1,72 @@
+Placa: MIT123, uniqueIDRS: PDPAPPV8122024, Response: {"message":"Transacción cancelada en Flypass","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: MIT123, uniqueIDRS: PDPAPPV8122024, Response: {"message":"Transacción cancelada en Flypass","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+Placa: MIT123, uniqueIDRS: PDPAPPV8122024, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: MIT123, uniqueIDRS: PDPAPPV8122024, Response: {"message":"Transacción cancelada en Flypass","plate":null,"parking_id":null,"unique_id":null,"parking_entrance_date":null}
+--------------------------Placa: MIT123, uniqueIDRS: PDPAPPC8122024, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: NAJ352, uniqueIDRS: PDPAPPV8122025, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: QWE000, uniqueIDRS: PDPAPPV8122026, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: RAQ035, uniqueIDRS: PDPAPPV8122027, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ROB714, uniqueIDRS: PDPAPPV8122028, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: RTQ843, uniqueIDRS: PDPAPPV8122029, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: SOP002, uniqueIDRS: PDPAPPV8122030, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: SOP008, uniqueIDRS: PDPAPPV8122031, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: DUL009, uniqueIDRS: PDPAPPV8122032, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: COA721, uniqueIDRS: PDPAPPV8122033, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: JJV112, uniqueIDRS: PDPAPPV8122034, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: LAM000, uniqueIDRS: PDPAPPV8122035, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: LAM001, uniqueIDRS: PDPAPPV8122036, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: LED195, uniqueIDRS: PDPAPPV8122037, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: MIT123, uniqueIDRS: PDPAPPC8122024, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: NAJ352, uniqueIDRS: PDPAPPV8122025, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: QWE000, uniqueIDRS: PDPAPPV8122026, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: RAQ035, uniqueIDRS: PDPAPPV8122027, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ROB714, uniqueIDRS: PDPAPPV8122028, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: RTQ843, uniqueIDRS: PDPAPPV8122029, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: SOP002, uniqueIDRS: PDPAPPV8122030, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: SOP008, uniqueIDRS: PDPAPPV8122031, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: DUL009, uniqueIDRS: PDPAPPV8122032, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: COA721, uniqueIDRS: PDPAPPV8122033, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: JJV112, uniqueIDRS: PDPAPPV8122034, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: LAM000, uniqueIDRS: PDPAPPV8122035, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: LAM001, uniqueIDRS: PDPAPPV8122036, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: LED195, uniqueIDRS: PDPAPPV8122037, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: MIT123, uniqueIDRS: PDPAPPC8122024, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: NAJ352, uniqueIDRS: PDPAPPV8122025, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: QWE000, uniqueIDRS: PDPAPPV8122026, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: RAQ035, uniqueIDRS: PDPAPPV8122027, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ROB714, uniqueIDRS: PDPAPPV8122028, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: RTQ843, uniqueIDRS: PDPAPPV8122029, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: SOP002, uniqueIDRS: PDPAPPV8122030, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: SOP008, uniqueIDRS: PDPAPPV8122031, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: DUL009, uniqueIDRS: PDPAPPV8122032, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: COA721, uniqueIDRS: PDPAPPV8122033, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: JJV112, uniqueIDRS: PDPAPPV8122034, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: LAM000, uniqueIDRS: PDPAPPV8122035, Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: LAM001, uniqueIDRS: PDPAPPV8122036, Response: 
+Placa: LED195, uniqueIDRS: PDPAPPV8122037, Response: 
+Placa: MIT123, uniqueIDRS: PDPAPPC8122024, Response: 
+Placa: NAJ352, uniqueIDRS: PDPAPPV8122025, Response: 
+Placa: QWE000, uniqueIDRS: PDPAPPV8122026, Response: 
+Placa: RAQ035, uniqueIDRS: PDPAPPV8122027, Response: 
+Placa: ROB714, uniqueIDRS: PDPAPPV8122028, Response: 
+Placa: RTQ843, uniqueIDRS: PDPAPPV8122029, Response: 
+Placa: SOP002, uniqueIDRS: PDPAPPV8122030, Response: 
+Placa: SOP008, uniqueIDRS: PDPAPPV8122031, Response: 
+Placa: DUL009, uniqueIDRS: PDPAPPV8122032, Response: 
+Placa: COA721, uniqueIDRS: PDPAPPV8122033, Response: 
+Placa: JJV112, uniqueIDRS: PDPAPPV8122034, Response: 
+Placa: LAM000, uniqueIDRS: PDPAPPV8122035, Response: 
+Placa: LAM001, uniqueIDRS: PDPAPPV8122036, Response: 
+Placa: LED195, uniqueIDRS: PDPAPPV8122037, Response: 
+Placa: MIT123, uniqueIDRS: PDPAPPC8122024, Response: 
+Placa: NAJ352, uniqueIDRS: PDPAPPV8122025, Response: 
+Placa: QWE000, uniqueIDRS: PDPAPPV8122026, Response: 
+Placa: RAQ035, uniqueIDRS: PDPAPPV8122027, Response: 
+Placa: ROB714, uniqueIDRS: PDPAPPV8122028, Response: 
+Placa: RTQ843, uniqueIDRS: PDPAPPV8122029, Response: 
+Placa: SOP002, uniqueIDRS: PDPAPPV8122030, Response: 
+Placa: SOP008, uniqueIDRS: PDPAPPV8122031, Response: 
+Placa: DUL009, uniqueIDRS: PDPAPPV8122032, Response: 
+Placa: COA721, uniqueIDRS: PDPAPPV8122033, Response: 
+Placa: JJV112, uniqueIDRS: PDPAPPV8122034, Response: 
+Placa: LAM000, uniqueIDRS: PDPAPPV8122035, Response: 

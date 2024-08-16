@@ -1,0 +1,2 @@
+Placa: MIT123, Response: {"code":"000","message":"Operación Exitosa","body":{"statuscode":200,"data":{"responseCode":1,"invoice":"","timeToExit":10,"response":"","tradeCode":""}}}
+Placa: RAQ035, Response: {"code":"000","message":"Operación Exitosa","body":{"statuscode":200,"data":{"responseCode":1,"invoice":"","timeToExit":10,"response":"","tradeCode":""}}}

@@ -1,0 +1,4 @@
+Placa: NAJ352, Response: {"code":"100","message":"Ocurri? un error realizando la operaci?n: null","body":null}
+Placa: QWE000, Response: {"code":"100","message":"Ocurri? un error realizando la operaci?n: null","body":null}
+Placa: ROB714, Response: 
+Placa: RTQ843, Response: 

@@ -190,3 +190,218 @@ Placa: ABD226, Response Code: 401, Response Message: , Response: {"error":"001",
 Placa: BDA734, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
 Placa: ACD476, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
 Placa: ACD477, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+--------------------------------------------------
+Placa: MIT123, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ABB475","parking_id":"100","unique_id":"PDPEAV8122024","parking_entrance_date":"2024-08-12T15:30:33"}
+Placa: BAA975, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BAA975","parking_id":"100","unique_id":"PDPAAV8122234","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BAB352, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BAB352","parking_id":"100","unique_id":"PDPAAV8122235","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BDA113, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BDA113","parking_id":"100","unique_id":"PDPAAV8122236","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BAB146, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BAB146","parking_id":"100","unique_id":"PDPAAV8122237","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BBD207, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BBD207","parking_id":"100","unique_id":"PDPAAV8122238","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: AEB684, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"AEB684","parking_id":"100","unique_id":"PDPAAV8122239","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ADC140, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ADC140","parking_id":"100","unique_id":"PDPAAV8122240","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: AAC250, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"AAC250","parking_id":"100","unique_id":"PDPAAV8122241","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: AAD544, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"AAD544","parking_id":"100","unique_id":"PDPAAV8122242","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ABA741, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ABA741","parking_id":"100","unique_id":"PDPAAV8122243","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: CAD179, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"CAD179","parking_id":"100","unique_id":"PDPAAV8122244","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ABA430, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ABA430","parking_id":"100","unique_id":"PDPAAV8122245","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BAB468, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BAB468","parking_id":"100","unique_id":"PDPAAV8122246","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BEB777, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BEB777","parking_id":"100","unique_id":"PDPAAV8122247","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ACC859, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ACC859","parking_id":"100","unique_id":"PDPAAV8122248","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ABB477, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ABB477","parking_id":"100","unique_id":"PDPAAV8122249","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ABA466, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ABA466","parking_id":"100","unique_id":"PDPAAV8122250","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: DUL009, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"DUL009","parking_id":"100","unique_id":"PDPPAV28092032","parking_entrance_date":"2024-08-09T22:24:26"}
+Placa: COA721, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"COA721","parking_id":"100","unique_id":"PDPPAV28092033","parking_entrance_date":"2024-08-09T22:24:28"}
+Placa: JJV112, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"JJV112","parking_id":"100","unique_id":"PDPPAV28092034","parking_entrance_date":"2024-08-09T22:24:29"}
+Placa: LAM000, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"LAM000","parking_id":"100","unique_id":"PDPPAV28092035","parking_entrance_date":"2024-08-09T22:24:31"}
+Placa: LAM001, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"LAM001","parking_id":"100","unique_id":"PDPPAV28092036","parking_entrance_date":"2024-08-09T22:24:32"}
+Placa: LED195, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"LED195","parking_id":"100","unique_id":"PDPPAV28092037","parking_entrance_date":"2024-08-09T22:24:34"}
+Placa: BAB248, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BAB248","parking_id":"100","unique_id":"PDPAAV8122251","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ACC567, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ACC567","parking_id":"100","unique_id":"PDPAAV8122252","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ACC568, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ACC568","parking_id":"100","unique_id":"PDPAAV8122253","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ACC569, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ACC569","parking_id":"100","unique_id":"PDPAAV8122254","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: CAD199, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"CAD199","parking_id":"100","unique_id":"PDPAAV8122255","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: CAD471, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"CAD471","parking_id":"100","unique_id":"PDPAAV8122256","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ACC899, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ACC899","parking_id":"100","unique_id":"PDPAAV8122257","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BCE450, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BCE450","parking_id":"100","unique_id":"PDPAAV8122258","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: CAD790, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"CAD790","parking_id":"100","unique_id":"PDPAAV8122259","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ACC901, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ACC901","parking_id":"100","unique_id":"PDPAAV8122260","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ADE749, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ADE749","parking_id":"100","unique_id":"PDPAAV8122261","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ADE750, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ADE750","parking_id":"100","unique_id":"PDPAAV8122262","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BAA828, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BAA828","parking_id":"100","unique_id":"PDPAAV8122263","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ACC178, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ACC178","parking_id":"100","unique_id":"PDPAAV8122264","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BEB830, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BEB830","parking_id":"100","unique_id":"PDPAAV8122265","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ADE011, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ADE011","parking_id":"100","unique_id":"PDPAAV8122266","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BCE454, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BCE454","parking_id":"100","unique_id":"PDPAAV8122267","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BAE692, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BAE692","parking_id":"100","unique_id":"PDPAAV8122268","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: AAC452, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"AAC452","parking_id":"100","unique_id":"PDPAAV8122269","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ACC276, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ACC276","parking_id":"100","unique_id":"PDPAAV8122270","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BEB208, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BEB208","parking_id":"100","unique_id":"PDPAAV8122271","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: AAC580, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"AAC580","parking_id":"100","unique_id":"PDPAAV8122272","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BCB618, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BCB618","parking_id":"100","unique_id":"PDPAAV8122273","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BCB619, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BCB619","parking_id":"100","unique_id":"PDPAAV8122274","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: CAA300, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"CAA300","parking_id":"100","unique_id":"PDPAAV8122275","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: AAC581, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"AAC581","parking_id":"100","unique_id":"PDPAAV8122276","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BAA933, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BAA933","parking_id":"100","unique_id":"PDPAAV8122277","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ABC691, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ABC691","parking_id":"100","unique_id":"PDPAAV8122278","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BAE819, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BAE819","parking_id":"100","unique_id":"PDPAAV8122279","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ACE616, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ACE616","parking_id":"100","unique_id":"PDPAAV8122280","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: CAA302, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"CAA302","parking_id":"100","unique_id":"PDPAAV8122281","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BCB621, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BCB621","parking_id":"100","unique_id":"PDPAAV8122282","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: AAA922, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"AAA922","parking_id":"100","unique_id":"PDPAAV8122283","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: AEB657, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"AEB657","parking_id":"100","unique_id":"PDPAAV8122284","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BAD124, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BAD124","parking_id":"100","unique_id":"PDPAAV8122285","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ABC994, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ABC994","parking_id":"100","unique_id":"PDPAAV8122286","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ABC692, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ABC692","parking_id":"100","unique_id":"PDPAAV8122287","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ABC693, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ABC693","parking_id":"100","unique_id":"PDPAAV8122288","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BEB230, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BEB230","parking_id":"100","unique_id":"PDPAAV8122289","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BCA026, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BCA026","parking_id":"100","unique_id":"PDPAAV8122290","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BBD177, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BBD177","parking_id":"100","unique_id":"PDPAAV8122291","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BAA934, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"BAA934","parking_id":"100","unique_id":"PDPAAV8122292","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: CAD281, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"CAD281","parking_id":"100","unique_id":"PDPAAV8122293","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ADE282, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ADE282","parking_id":"100","unique_id":"PDPAAV8122294","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: ACC450, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"ACC450","parking_id":"100","unique_id":"PDPAAV8122295","parking_entrance_date":"2024-07-10T15:35:13"}
+Placa: BCA027, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ABA597, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC233, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ADE071, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ABA388, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAD093, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ADE072, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BDC088, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAD859, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCE436, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC165, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBC647, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEB616, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBE423, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BAD342, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BAA295, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCE986, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEA422, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCE988, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BAB339, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ADE027, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEB101, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC187, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC186, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAD509, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC821, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC822, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: AAA362, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BAB445, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: AAD535, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBA780, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ABC563, Response Code: 403, Response Message: , Response: 
+Placa: BBA781, Response Code: 403, Response Message: , Response: 
+Placa: AAA803, Response Code: 403, Response Message: , Response: 
+Placa: BED472, Response Code: 403, Response Message: , Response: 
+Placa: ADE691, Response Code: 403, Response Message: , Response: 
+Placa: BED858, Response Code: 403, Response Message: , Response: 
+Placa: BDA094, Response Code: 403, Response Message: , Response: 
+Placa: AEB601, Response Code: 403, Response Message: , Response: 
+Placa: ADE703, Response Code: 403, Response Message: , Response: 
+Placa: AAB168, Response Code: 403, Response Message: , Response: 
+Placa: ACC834, Response Code: 403, Response Message: , Response: 
+Placa: CAD741, Response Code: 403, Response Message: , Response: 
+Placa: BEB769, Response Code: 403, Response Message: , Response: 
+Placa: BEB770, Response Code: 403, Response Message: , Response: 
+Placa: AAB169, Response Code: 403, Response Message: , Response: 
+Placa: BEA695, Response Code: 403, Response Message: , Response: 
+Placa: AAD352, Response Code: 403, Response Message: , Response: 
+Placa: CAB033, Response Code: 403, Response Message: , Response: 
+Placa: ABB406, Response Code: 403, Response Message: , Response: 
+Placa: BDA520, Response Code: 403, Response Message: , Response: 
+Placa: BEA965, Response Code: 403, Response Message: , Response: 
+Placa: BDE087, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCE317, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: AED796, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: AAE962, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAD189, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: AEC007, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCE318, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBD904, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ABA222, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ABD226, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BDA734, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACD476, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACD477, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEC454, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCA561, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: MIT123, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"MIT123","parking_id":"100","unique_id":"PDPAPPV8122024","parking_entrance_date":"2024-08-13T10:48:41"}
+Placa: MIT123, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"MIT123","parking_id":"100","unique_id":"PDPAPPV8122024","parking_entrance_date":"2024-08-13T10:48:41"}
+Placa: MIT123, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: MIT123, Response Code: 409, Response Message: , Response: {"message":"Número de transacción ya procesado anteriormente","plate":"MIT123","parking_id":"100","unique_id":"PDPAPPV8122024","parking_entrance_date":"2024-08-13T10:48:41"}
+-------------------------------Placa: BAA934, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAD281, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ADE282, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC450, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCA027, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ABA597, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC233, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ADE071, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ABA388, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAD093, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ADE072, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BDC088, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAD859, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCE436, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC165, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBC647, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEB616, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBE423, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BAD342, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BAA295, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCE986, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEA422, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BCE988, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BAB339, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ADE027, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEB101, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC187, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC186, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAD509, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC821, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC822, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: AAA362, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BAB445, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: AAD535, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBA780, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ABC563, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BBA781, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: AAA803, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BED472, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ADE691, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BED858, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BDA094, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: AEB601, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ADE703, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: AAB168, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: ACC834, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: CAD741, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEB769, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEB770, Response Code: 401, Response Message: , Response: {"error":"001","error_description":"Usuario no autorizado"}
+Placa: BEA695, Response Code: 403, Response Message: , Response: 
+Placa: AAD352, Response Code: 403, Response Message: , Response: 
+Placa: CAB033, Response Code: 403, Response Message: , Response: 
+Placa: ABB406, Response Code: 403, Response Message: , Response: 
+Placa: BDA520, Response Code: 403, Response Message: , Response: 
+Placa: BEA965, Response Code: 403, Response Message: , Response: 
+Placa: BDE087, Response Code: 403, Response Message: , Response: 
+Placa: BCE317, Response Code: 403, Response Message: , Response: 
+Placa: AED796, Response Code: 403, Response Message: , Response: 
+Placa: AAE962, Response Code: 403, Response Message: , Response: 
+Placa: CAD189, Response Code: 403, Response Message: , Response: 
+Placa: AEC007, Response Code: 403, Response Message: , Response: 
+Placa: BCE318, Response Code: 403, Response Message: , Response: 
+Placa: BBD904, Response Code: 403, Response Message: , Response: 
+Placa: ABA222, Response Code: 403, Response Message: , Response: 
+Placa: ABD226, Response Code: 403, Response Message: , Response: 
+Placa: BDA734, Response Code: 403, Response Message: , Response: 
+Placa: ACD476, Response Code: 403, Response Message: , Response: 
+Placa: ACD477, Response Code: 403, Response Message: , Response: 
+Placa: BEC454, Response Code: 403, Response Message: , Response: 
+Placa: BCA561, Response Code: 403, Response Message: , Response: 
+Placa: ACA993, Response Code: 403, Response Message: , Response: 
+Placa: BCA562, Response Code: 403, Response Message: , Response: 
+Placa: BBD927, Response Code: 403, Response Message: , Response: 
+Placa: AEB918, Response Code: 403, Response Message: , Response: 
